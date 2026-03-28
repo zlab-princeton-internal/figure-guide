@@ -30,54 +30,26 @@
 - 示意图中的箭头用纯黑、细、无边框的样式（PPT 中的默认细箭头即可）。
 - 图中的文字和边框大部分情况下应该用纯黑色等高对比度颜色，不要用灰色。灰色会显得像网页而不是学术论文。
 - 方框中的文字大小要和框的大小匹配。文字不能在框内四面都离边很远，至少上下或左右要贴近框边。
-- 配色可以考虑深色底 + 白色文字的风格。参考下面 DyT 示例。
-- 尽量去掉无意义的分隔线和边框，可以用背景色块代替。比如展示数据样本时，用不同颜色的背景块分隔比画线更好看。
+- 配色可以考虑深色底 + 白色文字的风格。参考 Fig. 1。
+- 尽量去掉无意义的分隔线和边框，可以用背景色块代替（参考 Fig. 5）。
 - **注意图与 caption、caption 与正文之间的间距。** 这个间距经常要么太大要么太小，需要手动调整。只要你 aware 这件事，就会调到合适的距离。
 - **图内部不要太松散也不要太拥挤。** 箭头不要太长，box 和 box 之间不要隔太远。箭头应该基本填满两个 box 之间的空隙，不要出现"两个 box 隔很大一段空白、中间只有一小截箭头"的情况。
 - 表格去掉所有竖线。
 
-示例（细箭头 + 黑色细边框 + 深色底白字 + 文字贴合框大小）：
-
-![DyT diagram](examples/dyt_diagram.png)
-
 ## 示意图 / Teaser
 
 - 核心 idea 用一张简单的图表达出来。不要画特别复杂的 pipeline 图（上下三四行、左右几列、每个 component 都有标注和颜色）。越简单越好。
-- 可以用对比的方式（旧方法 vs 你的方法），让 idea 一目了然。
-
-示例（MoCo：用一张简洁的图表达整个核心机制）：
-
-![MoCo Figure 1](examples/moco_fig1.png)
-
-示例（MoCo Figure 2：三种方法并排对比，结构一致，差异一目了然，每个子图单独读也很容易理解）：
-
-![MoCo Figure 2](examples/moco_fig2.png)
-
-示例（Wanda：左右对比，用具体数字演示两种方法的差异，一看就懂）：
-
-![Wanda Figure 1](examples/wanda_fig1.png)
-
-示例（DyT：左右对比，简洁明了）：
-
-![DyT diagram](examples/dyt_diagram.png)
+- 可以用对比的方式（旧方法 vs 你的方法），让 idea 一目了然。参考 Fig. 1–4。
 
 ## 内容
 
 - 如果你的工作涉及 vision generation，论文中一定要展示 generation samples，不能只有数值表格和 plot。
-- 多放具体的 examples（数据集样本、环境截图、模型输出等），让读者能直观看到你的数据和结果长什么样。尤其是数据相关的工作。
-
-示例（展示数据集样本，让读者直观看到数据长什么样）：
-
-![Data examples](examples/colorbox_example.png)
+- 多放具体的 examples（数据集样本、环境截图、模型输出等），让读者能直观看到你的数据和结果长什么样。尤其是数据相关的工作。参考 Fig. 5。
 
 ## 伪代码 / 代码
 
 - 如果你的方法足够简单，考虑加一个伪代码或真实代码（如 PyTorch）来描述核心算法。这对 clarity 很有帮助。
-- 方法简单时用真实代码，概念性的用伪代码。
-
-示例（Wanda：直接用 PyTorch 代码，几行就说清楚了）：
-
-![Wanda Algorithm](examples/wanda_algo.png)
+- 方法简单时用真实代码，概念性的用伪代码。参考 Fig. 6。
 
 ## 布局
 
@@ -101,16 +73,8 @@
 - 折线图、scatter plot 等一般应该是宽略大于高的矩形，不要用正方形，更不要高大于宽。微微偏胖一点比较好看。
 - 折线图考虑加很淡的虚线网格作为背景，增加结构感，方便读者读取数值。
 - 柱状图的 bar 一定要用纯粹的矩形，不要用圆角。
-- 配色要反复调整，不要随意选。可以参考 DyT 和 MoCo 论文的配色方案。下图中的彩色背景块配色也可参考（实际使用可适当调浅）。（后续会补充推荐配色。）
-- Heatmap 的配色不容易调好，下面是一个可参考的红黄绿配色方案。
-
-示例（用背景色块代替分隔线，配色参考）：
-
-![Color box example](examples/colorbox_example.png)
-
-示例（Heatmap 配色参考）：
-
-![Heatmap example](examples/heatmap_example.png)
+- 配色要反复调整，不要随意选。可以参考 DyT 和 MoCo 论文的配色方案，以及 Fig. 5 中的彩色背景块配色（实际使用可适当调浅）。（后续会补充推荐配色。）
+- Heatmap 的配色不容易调好，Fig. 7 是一个可参考的红黄绿配色方案。
 
 ## 引用
 
@@ -125,3 +89,35 @@
 
 - 不要过度依赖 AI 制作图表。
 - 流程图和示意图一律不用 AI 生成，手动制作。AI 最多辅助制作一小部分。
+
+---
+
+## 示例
+
+**Fig. 1** — 细箭头 + 黑色细边框 + 深色底白字 + 文字贴合框大小。From [DyT](https://arxiv.org/abs/2503.10622).
+
+![Fig. 1](examples/dyt_diagram.png)
+
+**Fig. 2** — 用一张简洁的图表达整个核心机制。From [MoCo](https://arxiv.org/abs/1911.05722).
+
+![Fig. 2](examples/moco_fig1.png)
+
+**Fig. 3** — 三种方法并排对比，结构一致，差异一目了然。From [MoCo](https://arxiv.org/abs/1911.05722).
+
+![Fig. 3](examples/moco_fig2.png)
+
+**Fig. 4** — 左右对比，用具体数字演示两种方法的差异，一看就懂。From [Wanda](https://arxiv.org/abs/2306.11695).
+
+![Fig. 4](examples/wanda_fig1.png)
+
+**Fig. 5** — 用背景色块代替分隔线展示数据样本，配色参考。From WorldBench (upcoming).
+
+![Fig. 5](examples/colorbox_example.png)
+
+**Fig. 6** — 直接用 PyTorch 代码描述算法，几行就说清楚了。From [Wanda](https://arxiv.org/abs/2306.11695).
+
+![Fig. 6](examples/wanda_algo.png)
+
+**Fig. 7** — Heatmap 配色参考（红黄绿方案）。From WorldBench (upcoming).
+
+![Fig. 7](examples/heatmap_example.png)

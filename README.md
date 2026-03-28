@@ -31,54 +31,26 @@ These two points are the most frequently repeated feedback. Get these right and 
 - **Use thin, pure black, borderless arrows** in diagrams (the default thin arrow in PowerPoint/Keynote works well).
 - **Text and borders should mostly be pure black** (high contrast). Avoid gray — it looks like a webpage, not an academic paper.
 - **Text inside boxes should fit the box size.** Do not leave large gaps on all four sides — at least top/bottom or left/right should be close to the box edges.
-- Consider a **dark background + white text** style for boxes. See the DyT example below.
-- **Replace unnecessary dividing lines with colored background blocks.** For example, when showing data samples, colored boxes look cleaner than drawn borders.
+- Consider a **dark background + white text** style for boxes. See Fig. 1.
+- **Replace unnecessary dividing lines with colored background blocks** (see Fig. 5).
 - **Pay attention to the spacing between figure and caption, and between caption and body text.** This spacing is often too large or too small — adjust it manually. Once you are aware of this, you will get it right.
 - **Figures should not be too sparse or too crowded internally.** Keep arrows short — they should roughly fill the gap between boxes. Avoid situations where two boxes are far apart with only a tiny arrow in between.
 - **Remove all vertical lines in tables.**
 
-Example (thin arrows + thin black borders + dark bg with white text + text fitting the box):
-
-![DyT diagram](examples/dyt_diagram.png)
-
 ## Diagrams & Teasers
 
 - **Express your core idea in one simple figure.** Do not draw overly complex pipeline diagrams (multiple rows, multiple columns, every component annotated with colors). Simpler is better.
-- Use **side-by-side comparison** (old method vs. yours) to make the difference immediately clear.
-
-Example (MoCo: one simple figure captures the entire mechanism):
-
-![MoCo Figure 1](examples/moco_fig1.png)
-
-Example (MoCo Figure 2: three methods side by side, consistent structure, differences obvious at a glance):
-
-![MoCo Figure 2](examples/moco_fig2.png)
-
-Example (Wanda: left-right comparison with concrete numbers, instantly understandable):
-
-![Wanda Figure 1](examples/wanda_fig1.png)
-
-Example (DyT: left-right comparison, clean and clear):
-
-![DyT diagram](examples/dyt_diagram.png)
+- Use **side-by-side comparison** (old method vs. yours) to make the difference immediately clear. See Fig. 1–4.
 
 ## Content
 
 - If your work involves **vision generation**, you must show generation samples — not just numerical tables and plots.
-- **Show concrete examples** (dataset samples, environment screenshots, model outputs, etc.) so readers can see what your data and results actually look like. Especially important for data-centric work.
-
-Example (showing dataset samples with colored background blocks):
-
-![Data examples](examples/colorbox_example.png)
+- **Show concrete examples** (dataset samples, environment screenshots, model outputs, etc.) so readers can see what your data and results actually look like. Especially important for data-centric work. See Fig. 5.
 
 ## Pseudocode / Code
 
 - If your method is simple enough, consider including pseudocode or real code (e.g., PyTorch) to describe the core algorithm. This greatly helps clarity.
-- Use real code when the method is simple; use pseudocode for more conceptual descriptions.
-
-Example (Wanda: a few lines of PyTorch code explain everything):
-
-![Wanda Algorithm](examples/wanda_algo.png)
+- Use real code when the method is simple; use pseudocode for more conceptual descriptions. See Fig. 6.
 
 ## Layout
 
@@ -102,16 +74,8 @@ Example (Wanda: a few lines of PyTorch code explain everything):
 - **Line plots and scatter plots should be slightly wider than tall** — a landscape rectangle. Avoid squares, and especially avoid portrait orientation (taller than wide).
 - Consider adding **faint dashed grid lines** as background in line plots for better structure and easier value reading.
 - **Bar chart bars must be sharp rectangles.** No rounded corners.
-- **Iterate on color choices.** Do not pick colors casually. Refer to DyT and MoCo papers for color schemes. The colored blocks in the example below can also be a reference (lighten as needed). (Recommended palettes to be added later.)
-- **Heatmap colors are hard to get right.** Below is a reference red-yellow-green scheme.
-
-Example (colored background blocks as palette reference):
-
-![Color box example](examples/colorbox_example.png)
-
-Example (heatmap color scheme reference):
-
-![Heatmap example](examples/heatmap_example.png)
+- **Iterate on color choices.** Do not pick colors casually. Refer to DyT and MoCo papers for color schemes, and the colored blocks in Fig. 5 (lighten as needed). (Recommended palettes to be added later.)
+- **Heatmap colors are hard to get right.** See Fig. 7 for a reference red-yellow-green scheme.
 
 ## References
 
@@ -126,3 +90,35 @@ Example (heatmap color scheme reference):
 
 - **Do not over-rely on AI for figure making.**
 - **Never use AI to generate flowcharts or diagrams.** Make them manually. AI may only assist with small, isolated parts.
+
+---
+
+## Examples
+
+**Fig. 1** — Thin arrows + thin black borders + dark bg with white text + text fitting the box. From [DyT](https://arxiv.org/abs/2503.10622).
+
+![Fig. 1](examples/dyt_diagram.png)
+
+**Fig. 2** — One simple figure captures the entire core mechanism. From [MoCo](https://arxiv.org/abs/1911.05722).
+
+![Fig. 2](examples/moco_fig1.png)
+
+**Fig. 3** — Three methods side by side, consistent structure, differences obvious at a glance. From [MoCo](https://arxiv.org/abs/1911.05722).
+
+![Fig. 3](examples/moco_fig2.png)
+
+**Fig. 4** — Left-right comparison with concrete numbers, instantly understandable. From [Wanda](https://arxiv.org/abs/2306.11695).
+
+![Fig. 4](examples/wanda_fig1.png)
+
+**Fig. 5** — Colored background blocks instead of dividing lines for data samples. Color palette reference. From WorldBench (upcoming).
+
+![Fig. 5](examples/colorbox_example.png)
+
+**Fig. 6** — A few lines of PyTorch code explain the entire algorithm. From [Wanda](https://arxiv.org/abs/2306.11695).
+
+![Fig. 6](examples/wanda_algo.png)
+
+**Fig. 7** — Heatmap color scheme reference (red-yellow-green). From WorldBench (upcoming).
+
+![Fig. 7](examples/heatmap_example.png)
