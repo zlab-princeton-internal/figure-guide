@@ -16,6 +16,10 @@ These two points are the most frequently repeated feedback. Get these right and 
 
 - **Do not bold text in diagrams/flowcharts.** Bolding does not improve readability — it just looks worse. At most, bold a few specific words for emphasis. Never bold an entire category of text.
 
+## Workflow
+
+- **Sync Overleaf with Dropbox** so that figures you generate locally are automatically synced to Overleaf — no need to manually drag and upload each time. This saves a lot of time. Setup: [Overleaf-Dropbox sync](https://www.overleaf.com/learn/how-to/Dropbox_Synchronization).
+
 ## Format
 
 - **Always export figures as PDF** (vector graphics). Never use PNG/JPG for plots. PDF stays sharp when zooming in and text remains selectable.

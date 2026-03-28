@@ -15,6 +15,10 @@
 以上两条是最频繁反复强调的 feedback。搞对这两条，很多问题就不会出现。
 - **示意图/流程图中的文字一般不要加粗。** 加粗不会让文字更清晰，只会更丑。最多只对极少数需要强调的词加粗，不要整类文字都加粗。
 
+## 工作流
+
+- **用 Dropbox 同步 Overleaf**，这样你在本地生成的图会自动同步到 Overleaf，不用每次手动拖拽上传。这会节省大量时间。设置方法见 [Overleaf-Dropbox sync](https://www.overleaf.com/learn/how-to/Dropbox_Synchronization)。
+
 ## 格式
 
 - **所有图表导出为 PDF**（矢量图），不要用 PNG/JPG。放大不模糊，文字可选中。
