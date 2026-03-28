@@ -2,6 +2,11 @@
 
 # Figure & Table Guide
 
+## General Principle
+
+- In a good paper, a reader should be able to understand your core claims and conclusions just by scanning the key figures and tables — at most glancing at the captions, ideally without reading any body text. If readers must read the text to understand your most important figures, the figures are not clear enough.
+- Important figures and tables should have detailed captions. Do not write a one-line or half-line caption for your core results.
+
 ## Font (Most Common Issue — Please Get This Right)
 
 - **Please use Arial (or Helvetica) for text in diagrams and flowcharts.** Do not use serif fonts.

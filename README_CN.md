@@ -2,6 +2,11 @@
 
 # 图表制作指南
 
+## 总则
+
+- 一个好的 paper，读者扫一眼几个核心 figure 和 table 就能明白你最重要的 claim 和结论。最多再看一下 caption，最好连 caption 都不用看。如果读者必须读正文才能理解你最重要的图表，说明图表做得不够 clear、context 给得不够。
+- 重要的 figure 和 table，caption 一定要足够详细。核心结果的 caption 不能只有一行甚至半行。
+
 ## 字体（最常见的问题，请务必做到）
 
 - **流程图和示意图中的文字请使用 Arial（或 Helvetica）。** 不要用衬线字体。
