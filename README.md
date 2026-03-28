@@ -1,3 +1,5 @@
+[中文版](README_CN.md)
+
 # Figure & Table Guide
 
 ## Font (Most Common Issue — Please Get This Right)
