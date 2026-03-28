@@ -4,7 +4,7 @@
 
 ## Font (Most Common Issue — Please Get This Right)
 
-- **All text in figures must use Arial (or Helvetica).** Never use serif fonts.
+- **Please use Arial (or Helvetica) for text in diagrams and flowcharts.** Do not use serif fonts.
 - **Text size in figures should be close to the caption size — it can be slightly larger, but must never be much smaller.** The most common mistake is text that is way too small. Always check in the compiled PDF at 100% zoom.
 
 These two points are the most frequently repeated feedback. Get these right and most problems go away.
