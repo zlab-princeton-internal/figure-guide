@@ -14,7 +14,7 @@ These two points are the most frequently repeated feedback. Get these right and 
 ## Format
 
 - **Always export figures as PDF** (vector graphics). Never use PNG/JPG for plots. PDF stays sharp when zooming in and text remains selectable.
-- **Crop all white space** around figures.
+- **Crop all white space** around figures. In matplotlib, use `plt.savefig(..., bbox_inches='tight')`.
 
 ## Visual Style
 
