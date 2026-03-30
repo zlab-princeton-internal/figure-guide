@@ -29,7 +29,7 @@ These two points are the most frequently repeated feedback. Get these right and 
 
 - **Add thin black borders to boxes/rectangles** in diagrams. This makes them look more polished.
 - **Use thin, pure black, borderless arrows** in diagrams (the default thin arrow in PowerPoint/Keynote works well).
-- **Text and borders should mostly be pure black** (high contrast). Avoid gray — it looks like a webpage, not an academic paper.
+- **Text and borders should default to pure black.** Gray can be used for secondary elements (when pure black is already the primary color), but do not make gray the darkest color in the figure — it looks like a webpage, not an academic paper.
 - **Text inside boxes should fit the box size.** Do not leave large gaps on all four sides — at least top/bottom or left/right should be close to the box edges.
 - Consider a **dark background + white text** style for boxes.
 
@@ -46,6 +46,7 @@ These two points are the most frequently repeated feedback. Get these right and 
 
 - **Express your core idea in one simple figure.** Do not draw overly complex pipeline diagrams (multiple rows, multiple columns, every component annotated with colors). Simpler is better.
 - Use **side-by-side comparison** (old method vs. yours) to make the difference immediately clear.
+- Pipeline/diagram figures can also be made with HTML (easier to iterate via prompting), but be careful not to let the style look like a webpage — maintain an academic paper aesthetic.
 
 > **Fig. 2** — One simple figure captures the entire core mechanism. From [MoCo](https://arxiv.org/abs/1911.05722).
 >
@@ -95,7 +96,7 @@ These two points are the most frequently repeated feedback. Get these right and 
 
 ## Plots (matplotlib)
 
-- **Use matplotlib** for plots. Do not use HTML-based tools (Plotly, D3, etc.) for paper figures.
+- **Use matplotlib** for plots by default.
 - **Line plots and scatter plots should be slightly wider than tall** — a landscape rectangle. Avoid squares, and especially avoid portrait orientation (taller than wide).
 - Consider adding **faint dashed grid lines** as background in line plots for better structure and easier value reading.
 - **Bar chart bars must be sharp rectangles.** No rounded corners.
@@ -117,5 +118,5 @@ These two points are the most frequently repeated feedback. Get these right and 
 
 ## AI Usage
 
-- **Do not over-rely on AI for figure making.**
-- **Never use AI to generate flowcharts or diagrams.** Make them manually. AI may only assist with small, isolated parts.
+- **Do not over-rely on AI to directly generate images** (e.g., vision generation style figures).
+- Flowcharts and diagrams can be made via coding (e.g., HTML) and iterated through prompting. Manual tools (PowerPoint/Keynote) are also a reliable choice.
