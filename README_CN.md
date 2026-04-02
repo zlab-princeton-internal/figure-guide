@@ -13,6 +13,7 @@
 - **图中文字大小应与 caption 接近，可以稍大，但绝对不能比 caption 小很多。** 大部分人犯的错误是字太小，看着非常难受。请在编译后的 PDF 中检查。
 
 以上两条是最频繁反复强调的 feedback。搞对这两条，很多问题就不会出现。
+
 - **示意图/流程图中的文字一般不要加粗。** 加粗不会让文字更清晰，只会更丑。最多只对极少数需要强调的词加粗，不要整类文字都加粗。
 
 ## 工作流
@@ -22,13 +23,14 @@
 ## 格式
 
 - **所有图表导出为 PDF**（矢量图），不要用 PNG/JPG。放大不模糊，文字可选中。
-- **裁掉所有白边。** matplotlib 中使用 `plt.savefig(..., bbox_inches='tight')`。
+- **如果用 HTML 制作图，PDF 必须是矢量的，不能是光栅的。** 常见错误：HTML 渲染成 PNG 再转 PDF，放大会模糊。正确做法：用 Chrome 的 `--print-to-pdf` 生成真正的矢量 PDF，再用 `pdfcrop` 裁边。示例：`chrome --headless --print-to-pdf=out.pdf --no-pdf-header-footer file.html`，然后 `pdfcrop out.pdf out_cropped.pdf`。
+- **裁掉所有白边。** matplotlib 中使用 `plt.savefig(..., bbox_inches='tight')`。HTML 生成的 PDF 用 `pdfcrop`（TeX Live 自带）自动裁边。
 
 ## 视觉风格
 
 - 方框/矩形加黑色细边框，看起来更精致。
 - 示意图中的箭头用纯黑、细、无边框的样式（PPT 中的默认细箭头即可）。
-- 图中的文字和边框默认用纯黑色。灰色可以用来表示次要元素（当已经有纯黑作为主色时），但不要一上来最深的颜色就是灰色，会显得像网页而不是学术论文。
+- **文字和边框默认用纯黑色。** 灰色可以用来表示次要元素（当已经有纯黑作为主色时），但不要一上来最深的颜色就是灰色，会显得像网页而不是学术论文。箭头也一样：用纯黑箭头，不要灰色。
 - 方框中的文字大小要和框的大小匹配。文字不能在框内四面都离边很远，至少上下或左右要贴近框边。
 - 配色可以考虑深色底 + 白色文字的风格。
 
@@ -38,6 +40,7 @@
 
 - 尽量去掉无意义的分隔线和边框，可以用背景色块代替（参考 Fig. 5）。
 - **注意图与 caption、caption 与正文之间的间距。** 这个间距经常要么太大要么太小，需要手动调整。只要你 aware 这件事，就会调到合适的距离。
+- **Caption 必须与正文在视觉上有明显区分。** 使用 `\captionsetup{font=footnotesize}`（或至少 `font=small`），让 caption 明显比正文小一两号。扫一眼页面就应该能区分 caption 和正文，否则页面会显得杂乱、结构不清。
 - **图内部不要太松散也不要太拥挤。** 箭头不要太长，box 和 box 之间不要隔太远。箭头应该基本填满两个 box 之间的空隙，不要出现"两个 box 隔很大一段空白、中间只有一小截箭头"的情况。
 - 表格去掉所有竖线。
 
@@ -45,7 +48,8 @@
 
 - 核心 idea 用一张简单的图表达出来。不要画特别复杂的 pipeline 图（上下三四行、左右几列、每个 component 都有标注和颜色）。越简单越好。
 - 可以用对比的方式（旧方法 vs 你的方法），让 idea 一目了然。
-- Pipeline/diagram 类的图也可以考虑用 HTML 制作（通过 prompting 修改会更方便），但注意风格不要做成网页的感觉，要保持学术论文的视觉风格。
+- Pipeline/diagram 类的图也可以考虑用 HTML 制作（通过 prompting 修改会更方便），但注意避免典型的 HTML 风格：不要使用粗体文字、全大写短语、灰色分隔线、灰色文字。文字默认用黑色，使用普通大小写，保持学术论文的视觉风格。
+- **用 HTML 设计时，先并排提出多个布局方案再做选择。** 在一个 HTML 页面中同时展示 3-4 个平行方案来比较，比每次只改一点要快得多。这适用于布局、配色和元素位置。
 
 > **Fig. 2** — 用一张简洁的图表达整个核心机制。From [MoCo](https://arxiv.org/abs/1911.05722).
 >
@@ -113,9 +117,9 @@
 ## 工具
 
 - **Plot（折线图、柱状图、scatter plot 等）**：默认使用 matplotlib。
-- **流程图和示意图**：推荐使用 PowerPoint 或 Keynote。不要用 Google Slides，出图质量一般不好。也可以用更高级的工具（如 Illustrator），但 PowerPoint 已经足够好。
+- **流程图和示意图**：可以用代码（HTML/CSS 或 Python）通过 Claude Code 制作和迭代，方便协作和版本管理。代码源文件和 PDF 一起存到 repo。也可以用 PowerPoint 或 Keynote 手动制作。不要用 Google Slides，出图质量一般不好。
 
 ## AI 使用
 
 - 不要过度依赖 AI 直接生成图片（如 vision generation 类的图）。
-- 流程图和 diagram 可以考虑用 coding 的方式（如 HTML）制作，通过 prompting 迭代。但手动制作（PowerPoint/Keynote）仍然是可靠的选择。
+- 流程图和 diagram 可以考虑用 coding 的方式（如 HTML）制作，通过 prompting 迭代。手动制作（PowerPoint/Keynote）也是可靠的选择。

@@ -23,13 +23,14 @@ These two points are the most frequently repeated feedback. Get these right and 
 ## Format
 
 - **Always export figures as PDF** (vector graphics). Never use PNG/JPG for plots. PDF stays sharp when zooming in and text remains selectable.
-- **Crop all white space** around figures. In matplotlib, use `plt.savefig(..., bbox_inches='tight')`.
+- **If you make figures with HTML, the PDF must be vector, not raster.** A common mistake: rendering HTML to PNG then converting PNG to PDF — this produces a raster PDF that looks blurry when zoomed in. Instead, use Chrome's `--print-to-pdf` flag to generate a true vector PDF, then crop with `pdfcrop`. Example workflow: `chrome --headless --print-to-pdf=out.pdf --no-pdf-header-footer file.html`, then `pdfcrop out.pdf out_cropped.pdf`.
+- **Crop all white space** around figures. In matplotlib, use `plt.savefig(..., bbox_inches='tight')`. For PDF figures from HTML, use `pdfcrop` (part of TeX Live) to automatically trim all white borders.
 
 ## Visual Style
 
 - **Add thin black borders to boxes/rectangles** in diagrams. This makes them look more polished.
 - **Use thin, pure black, borderless arrows** in diagrams (the default thin arrow in PowerPoint/Keynote works well).
-- **Text and borders should default to pure black.** Gray can be used for secondary elements (when pure black is already the primary color), but do not make gray the darkest color in the figure — it looks like a webpage, not an academic paper.
+- **Text and borders should default to pure black.** Gray can be used for secondary elements (when pure black is already the primary color), but do not make gray the darkest color in the figure — it looks like a webpage, not an academic paper. This applies to arrows too: use pure black arrows, not gray. Gray borders and arrows give the figure a webpage aesthetic rather than an academic paper aesthetic.
 - **Text inside boxes should fit the box size.** Do not leave large gaps on all four sides — at least top/bottom or left/right should be close to the box edges.
 - Consider a **dark background + white text** style for boxes.
 
@@ -39,6 +40,7 @@ These two points are the most frequently repeated feedback. Get these right and 
 
 - **Replace unnecessary dividing lines with colored background blocks** (see Fig. 5).
 - **Pay attention to the spacing between figure and caption, and between caption and body text.** This spacing is often too large or too small — adjust it manually. Once you are aware of this, you will get it right.
+- **Captions must be visually distinct from body text at a glance.** Use `\captionsetup{font=footnotesize}` (or at least `font=small`) so that captions are clearly one or two sizes smaller than body text. When scanning a page, a reader should instantly tell which text is a caption and which is body — if they look the same size, the page feels cluttered and the structure is unclear.
 - **Figures should not be too sparse or too crowded internally.** Keep arrows short — they should roughly fill the gap between boxes. Avoid situations where two boxes are far apart with only a tiny arrow in between.
 - **Remove all vertical lines in tables.**
 
@@ -46,7 +48,8 @@ These two points are the most frequently repeated feedback. Get these right and 
 
 - **Express your core idea in one simple figure.** Do not draw overly complex pipeline diagrams (multiple rows, multiple columns, every component annotated with colors). Simpler is better.
 - Use **side-by-side comparison** (old method vs. yours) to make the difference immediately clear.
-- Pipeline/diagram figures can also be made with HTML (easier to iterate via prompting), but be careful not to let the style look like a webpage — maintain an academic paper aesthetic.
+- Pipeline/diagram figures can also be made with HTML (easier to iterate via prompting), but avoid the typical HTML aesthetic: no bold text, no ALL-CAPS phrases, no gray dividing lines, no gray text. Default to black text and normal capitalization. Maintain an academic paper look.
+- **When designing with HTML, propose multiple layout options side-by-side before committing.** It is much faster to compare 3–4 parallel designs in one HTML page than to iterate on a single design one tweak at a time. This applies to layout, color schemes, and element positioning.
 
 > **Fig. 2** — One simple figure captures the entire core mechanism. From [MoCo](https://arxiv.org/abs/1911.05722).
 >
@@ -114,7 +117,7 @@ These two points are the most frequently repeated feedback. Get these right and 
 ## Tools
 
 - **Plots (line charts, bar charts, scatter plots, etc.)**: use matplotlib by default.
-- **Flowcharts and diagrams**: use PowerPoint or Keynote. Do not use Google Slides — the output quality is generally poor. You may use more advanced tools (e.g., Illustrator), but PowerPoint is already good enough.
+- **Flowcharts and diagrams**: for diagrams that can be expressed programmatically (pipelines, flowcharts, architecture overviews), prefer using Claude Code with HTML/CSS or Python over manual tools like PowerPoint/Keynote. Code-based figures are easier to iterate, share, and collaboratively modify — anyone can tweak sizes, colors, and layout without needing the original software. Store the source HTML/Python alongside the PDF in the repo. Fall back to PowerPoint/Keynote for diagrams that require heavy manual arrangement. Do not use Google Slides — the output quality is generally poor.
 
 ## AI Usage
 
