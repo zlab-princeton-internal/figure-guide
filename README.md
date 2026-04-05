@@ -89,6 +89,7 @@ These two points are the most frequently repeated feedback. Get these right and 
 - **Figures should be within half a page of where they are first referenced.** Early figures (Figure 1/2) can be placed ahead for framing, but from the experiments section onward, keep figures close to their references.
 - **Side-by-side figures: the gap between them should be centered on the page** (or close to it). Do not let y-axis labels/ticks push everything to the right — shrink the figures or leave whitespace on the right to maintain visual symmetry. If there is an overall caption, it should also be centered on the page.
 - **Vertically align side-by-side subfigures**: the overall visual center of gravity (including titles and labels) should appear level. Design subfigures with consistent structure (both have titles on top, or neither does). If captions are separate ((a) and (b)), their first lines must align, and the number of caption lines should be similar.
+- **Avoid placing a narrow/sparse figure at the top of a page with large whitespace on both sides.** If a figure does not fill the column or page width, it leaves awkward empty space — especially noticeable at the top of a page. Either use `wrapfigure` to embed it alongside text, or place it in the middle of the page with text above and below.
 - **Never have two consecutive pages without any figure or table.** Even one page without a figure/table should be rare.
 
 ## Variety & Rhythm
@@ -104,6 +105,7 @@ These two points are the most frequently repeated feedback. Get these right and 
 - Consider adding **faint dashed grid lines** as background in line plots for better structure and easier value reading.
 - **Bar chart bars must be sharp rectangles.** No rounded corners.
 - **Iterate on color choices.** Do not pick colors casually. Refer to DyT and MoCo papers for color schemes, and the colored blocks in Fig. 5 (lighten as needed). (Recommended palettes to be added later.)
+- **Y-axis tick values must be round numbers.** Do not let matplotlib auto-generate tick values from the data range — values like 30.3, 71.1, 96.9 look sloppy and unprofessional. Manually set ticks to clean integers (e.g., 30, 50, 70).
 - **Heatmap colors are hard to get right.** See Fig. 7 for a reference.
 
 > **Fig. 7** — Heatmap color scheme reference (red-yellow-green). From WorldBench (upcoming).
