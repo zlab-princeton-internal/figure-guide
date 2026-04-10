@@ -2,6 +2,8 @@
 
 # Figure & Table Guide
 
+By [Zhuang Liu](https://liuzhuang13.github.io/).
+
 ## General Principle
 
 - In a good paper, a reader should be able to understand your core claims and conclusions just by scanning the key figures and tables — at most glancing at the captions, ideally without reading any body text. If readers must read the text to understand your most important figures, the figures are not clear enough.
