@@ -69,6 +69,7 @@ These two points are the most frequently repeated feedback. Get these right and 
 
 - If your work involves **vision generation**, you must show generation samples — not just numerical tables and plots.
 - **Show concrete examples** (dataset samples, environment screenshots, model outputs, etc.) so readers can see what your data and results actually look like. Especially important for data-centric work.
+- **Show failure cases.** This is especially important for VLM, VQA, generation, and similar work. Put them in the appendix, or in the main body if space allows. Showing failure cases makes your paper more credible and helps readers understand what is actually going on with your model. A paper that only shows successes is less trustworthy.
 
 > **Fig. 5** — Colored background blocks instead of dividing lines for data samples. Color palette reference. From WorldBench (upcoming).
 >
@@ -98,6 +99,7 @@ These two points are the most frequently repeated feedback. Get these right and 
 
 - **Use a variety of figure types**: line plots, bar charts, heatmaps, diagrams, etc. Do not use the same type throughout. Table sizes should also vary. But do not force variety for its own sake — keep it natural.
 - **Interleave figures and tables** throughout the paper. Do not cluster all figures on one page and all tables on another. The layout should have rhythm and visual appeal.
+- **Do not put one large figure at the front and then nothing but tables and line plots for the rest.** Spread visual elements (especially colorful or image-heavy figures) throughout the paper so the visual weight stays balanced. A reader should not flip through the middle of your paper and see only black-and-white text and numbers.
 - See [Cambrian-1](https://arxiv.org/abs/2406.16860) for a good example of figure/table arrangement.
 
 ## Plots (matplotlib)

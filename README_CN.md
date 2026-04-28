@@ -69,6 +69,7 @@ By [Zhuang Liu](https://liuzhuang13.github.io/).
 
 - 如果你的工作涉及 vision generation，论文中一定要展示 generation samples，不能只有数值表格和 plot。
 - 多放具体的 examples（数据集样本、环境截图、模型输出等），让读者能直观看到你的数据和结果长什么样。尤其是数据相关的工作。
+- 多展示 failure cases。这对 VLM、VQA、generation 类工作尤其重要。可以放 appendix，空间够也可以放正文。展示 failure cases 让你的论文更可信，也方便读者了解模型实际是什么情况。只展示成功案例的论文可信度反而会下降。
 
 > **Fig. 5** — 用背景色块代替分隔线展示数据样本，配色也可参考。From WorldBench (upcoming).
 >
@@ -98,6 +99,7 @@ By [Zhuang Liu](https://liuzhuang13.github.io/).
 
 - 图表类型要有 variety：折线图、柱状图、heatmap、示意图等混合使用，不要全是同一种。表格大小也应有些变化。但不要为了变化而强行变化，自然为主。
 - 图和表在论文中要穿插分布，不要某一页全是图、另一页全是表。整体要有节奏感和美感。
+- 不要把一个大图放在开头，然后后面全是表格和折线图。尽量让有图像、有彩色的视觉元素穿插在全文中，避免视觉比例失衡。读者翻到论文中段不应该只看到一片黑白的文字和数字。
 - 可参考 [Cambrian-1](https://arxiv.org/abs/2406.16860) 等论文的图表编排。
 
 ## Plot（matplotlib）
