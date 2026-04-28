@@ -99,7 +99,7 @@ These two points are the most frequently repeated feedback. Get these right and 
 
 - **Use a variety of figure types**: line plots, bar charts, heatmaps, diagrams, etc. Do not use the same type throughout. Table sizes should also vary. But do not force variety for its own sake — keep it natural.
 - **Interleave figures and tables** throughout the paper. Do not cluster all figures on one page and all tables on another. The layout should have rhythm and visual appeal.
-- **Do not put one large figure at the front and then nothing but tables and line plots for the rest.** Spread visual elements (especially colorful or image-heavy figures) throughout the paper so the visual weight stays balanced. A reader should not flip through the middle of your paper and see only black-and-white text and numbers.
+- **Do not put one large figure at the front and then nothing but tables and line plots for the rest.** Spread visual elements (especially image-heavy figures, qualitative samples, or diagrams) throughout the paper so the visual weight stays balanced. Even colorful tables and plots get tiring if that is all the reader sees page after page. Mix in different kinds of visual content.
 - See [Cambrian-1](https://arxiv.org/abs/2406.16860) for a good example of figure/table arrangement.
 
 ## Plots (matplotlib)
