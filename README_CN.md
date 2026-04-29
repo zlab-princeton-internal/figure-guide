@@ -4,6 +4,10 @@
 
 By [Zhuang Liu](https://liuzhuang13.github.io/).
 
+**相关**: [Writing Guide](https://github.com/zlab-princeton-internal/writing-guide) · [Paper Checking Prompt](https://github.com/zlab-princeton-internal/paper-checking-prompt) · [Peer Review System](https://github.com/zlab-princeton-internal/peer-review)
+
+> 本指南面向 [Zhuang Liu](https://liuzhuang13.github.io/) 组内成员。欢迎其他人参考或改编使用。
+
 ## 总则
 
 - 一个好的 paper，读者扫一眼几个核心 figure 和 table 就能明白你最重要的 claim 和结论。最多再看一下 caption，最好连 caption 都不用看。如果读者必须读正文才能理解你最重要的图表，说明图表做得不够 clear、context 给得不够。

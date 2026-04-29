@@ -4,6 +4,10 @@
 
 By [Zhuang Liu](https://liuzhuang13.github.io/).
 
+**Related**: [Writing Guide](https://github.com/zlab-princeton-internal/writing-guide) · [Paper Checking Prompt](https://github.com/zlab-princeton-internal/paper-checking-prompt) · [Peer Review System](https://github.com/zlab-princeton-internal/peer-review)
+
+> This guide is intended for [Zhuang Liu](https://liuzhuang13.github.io/)'s group members. Others are welcome to adopt or adapt it for their own use.
+
 ## General Principle
 
 - In a good paper, a reader should be able to understand your core claims and conclusions just by scanning the key figures and tables — at most glancing at the captions, ideally without reading any body text. If readers must read the text to understand your most important figures, the figures are not clear enough.
