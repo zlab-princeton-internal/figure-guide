@@ -15,8 +15,8 @@ By [Zhuang Liu](https://liuzhuang13.github.io/).
 
 ## Font (Most Common Issue — Please Get This Right)
 
-- **Please use Arial (or Helvetica) for text in diagrams and flowcharts.** Do not use serif fonts.
-- **Text size in figures should be close to the caption size — it can be slightly larger, but must never be much smaller.** The most common mistake is text that is way too small. Always check in the compiled PDF at 100% zoom.
+- **Please use Arial (or Helvetica) for all text in figures** (diagrams, flowcharts, plots, axis labels, etc.). Do not use serif fonts (e.g., Times New Roman) in figures in any case, unless you are intentional about using a different, more good-looking one.
+- **Check legends, titles, ticks, axis labels, and any other text in figures** — make sure they are the appropriate size, close to the caption size. The text can be slightly larger than the caption, but must never be much smaller. The most common mistake is text that is way too small. Always check in the compiled PDF at 100% zoom.
 
 These two points are the most frequently repeated feedback. Get these right and most problems go away.
 
@@ -30,12 +30,12 @@ These two points are the most frequently repeated feedback. Get these right and 
 
 - **Always export figures as PDF** (vector graphics). Never use PNG/JPG for plots. PDF stays sharp when zooming in and text remains selectable.
 - **If you make figures with HTML, the PDF must be vector, not raster.** A common mistake: rendering HTML to PNG then converting PNG to PDF — this produces a raster PDF that looks blurry when zoomed in. Instead, use Chrome's `--print-to-pdf` flag to generate a true vector PDF, then crop with `pdfcrop`. Example workflow: `chrome --headless --print-to-pdf=out.pdf --no-pdf-header-footer file.html`, then `pdfcrop out.pdf out_cropped.pdf`.
-- **Crop all white space** around figures. In matplotlib, use `plt.savefig(..., bbox_inches='tight')`. For PDF figures from HTML, use `pdfcrop` (part of TeX Live) to automatically trim all white borders.
+- **Crop all white space** around figures, so paper space is not wasted. Ensure figures utilize all the available width to the left and right (unless you intentionally leave space). In matplotlib, use `plt.savefig(..., bbox_inches='tight')`. For PDF figures from HTML, use `pdfcrop` (part of TeX Live) to automatically trim all white borders.
 
 ## Visual Style
 
 - **Add thin black borders to boxes/rectangles** in diagrams. This makes them look more polished.
-- **Use thin, pure black, borderless arrows** in diagrams (the default thin arrow in PowerPoint/Keynote works well).
+- **Use thin, pure black, borderless, sharp arrows** in diagrams (the default thin arrow in PowerPoint/Keynote works well).
 - **Text and borders should default to pure black.** Gray can be used for secondary elements (when pure black is already the primary color), but do not make gray the darkest color in the figure — it looks like a webpage, not an academic paper. This applies to arrows too: use pure black arrows, not gray. Gray borders and arrows give the figure a webpage aesthetic rather than an academic paper aesthetic.
 - **Text inside boxes should fit the box size.** Do not leave large gaps on all four sides — at least top/bottom or left/right should be close to the box edges.
 - Consider a **dark background + white text** style for boxes.
@@ -50,7 +50,7 @@ These two points are the most frequently repeated feedback. Get these right and 
 - **Captions must be visually distinct from body text at a glance.** Use `\captionsetup{font=footnotesize}` (or at least `font=small`) so that captions are clearly one or two sizes smaller than body text. When scanning a page, a reader should instantly tell which text is a caption and which is body — if they look the same size, the page feels cluttered and the structure is unclear.
 - **Figures should not be too sparse or too crowded internally.** Keep arrows short — they should roughly fill the gap between boxes. Avoid situations where two boxes are far apart with only a tiny arrow in between.
 - **Large boxes (e.g., colored prompt blocks) must close on all four sides, even when split across pages.** Each fragment should still look complete (see [Fig. 2](#fig-2)).
-- **Remove all vertical lines in tables.**
+- **Remove all vertical lines in tables.** In most cases, the table looks nicer without them. Look at how *Kaiming*'s papers never have vertical lines in tables.
 
 <a id="fig-2"></a>
 

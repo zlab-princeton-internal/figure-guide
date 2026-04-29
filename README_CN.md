@@ -15,8 +15,8 @@ By [Zhuang Liu](https://liuzhuang13.github.io/).
 
 ## 字体（最常见的问题，请务必做到）
 
-- **流程图和示意图中的文字请使用 Arial（或 Helvetica）。** 不要用衬线字体。
-- **图中文字大小应与 caption 接近，可以稍大，但绝对不能比 caption 小很多。** 大部分人犯的错误是字太小，看着非常难受。请在编译后的 PDF 中检查。
+- **图中所有文字请使用 Arial（或 Helvetica）**（包括示意图、流程图、plot、坐标轴标签等）。任何情况下都不要在图中使用衬线字体（如 Times New Roman），除非你有意使用其他更美观的字体。
+- **检查图中的图例、标题、刻度、坐标轴标签以及其他所有文字** — 大小应与 caption 接近。可以稍大，但绝对不能比 caption 小很多。最常见的问题是字太小，看着非常难受。请在编译后的 PDF 中以 100% 缩放检查。
 
 以上两条是最频繁反复强调的 feedback。搞对这两条，很多问题就不会出现。
 
@@ -30,12 +30,12 @@ By [Zhuang Liu](https://liuzhuang13.github.io/).
 
 - **所有图表导出为 PDF**（矢量图），不要用 PNG/JPG。放大不模糊，文字可选中。
 - **如果用 HTML 制作图，PDF 必须是矢量的，不能是光栅的。** 常见错误：HTML 渲染成 PNG 再转 PDF，放大会模糊。正确做法：用 Chrome 的 `--print-to-pdf` 生成真正的矢量 PDF，再用 `pdfcrop` 裁边。示例：`chrome --headless --print-to-pdf=out.pdf --no-pdf-header-footer file.html`，然后 `pdfcrop out.pdf out_cropped.pdf`。
-- **裁掉所有白边。** matplotlib 中使用 `plt.savefig(..., bbox_inches='tight')`。HTML 生成的 PDF 用 `pdfcrop`（TeX Live 自带）自动裁边。
+- **裁掉所有白边**，避免浪费论文空间。确保图片充分利用左右两侧的可用宽度（除非你有意留白）。matplotlib 中使用 `plt.savefig(..., bbox_inches='tight')`。HTML 生成的 PDF 用 `pdfcrop`（TeX Live 自带）自动裁边。
 
 ## 视觉风格
 
 - 方框/矩形加黑色细边框，看起来更精致。
-- 示意图中的箭头用纯黑、细、无边框的样式（PPT 中的默认细箭头即可）。
+- 示意图中的箭头用纯黑、细、无边框、锐利的样式（PPT 中的默认细箭头即可）。
 - **文字和边框默认用纯黑色。** 灰色可以用来表示次要元素（当已经有纯黑作为主色时），但不要一上来最深的颜色就是灰色，会显得像网页而不是学术论文。箭头也一样：用纯黑箭头，不要灰色。
 - 方框中的文字大小要和框的大小匹配。文字不能在框内四面都离边很远，至少上下或左右要贴近框边。
 - 配色可以考虑深色底 + 白色文字的风格。
@@ -50,7 +50,7 @@ By [Zhuang Liu](https://liuzhuang13.github.io/).
 - **Caption 必须与正文在视觉上有明显区分。** 使用 `\captionsetup{font=footnotesize}`（或至少 `font=small`），让 caption 明显比正文小一两号。扫一眼页面就应该能区分 caption 和正文，否则页面会显得杂乱、结构不清。
 - **图内部不要太松散也不要太拥挤。** 箭头不要太长，box 和 box 之间不要隔太远。箭头应该基本填满两个 box 之间的空隙，不要出现"两个 box 隔很大一段空白、中间只有一小截箭头"的情况。
 - **大的 box（比如带颜色的 prompt 框）必须四面封闭，即使跨页也是。** 每一截都要看起来完整（见 [Fig. 2](#fig-2)）。
-- 表格去掉所有竖线。
+- 表格去掉所有竖线。大多数情况下表格不带竖线更好看。参考 *Kaiming* 的论文——他的表格从不使用竖线。
 
 <a id="fig-2"></a>
 
