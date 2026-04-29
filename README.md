@@ -44,7 +44,21 @@ These two points are the most frequently repeated feedback. Get these right and 
 - **Pay attention to the spacing between figure and caption, and between caption and body text.** This spacing is often too large or too small — adjust it manually. Once you are aware of this, you will get it right.
 - **Captions must be visually distinct from body text at a glance.** Use `\captionsetup{font=footnotesize}` (or at least `font=small`) so that captions are clearly one or two sizes smaller than body text. When scanning a page, a reader should instantly tell which text is a caption and which is body — if they look the same size, the page feels cluttered and the structure is unclear.
 - **Figures should not be too sparse or too crowded internally.** Keep arrows short — they should roughly fill the gap between boxes. Avoid situations where two boxes are far apart with only a tiny arrow in between.
+- **Large boxes (e.g., colored prompt blocks) must close on all four sides, even when split across pages.** Each fragment should still look complete.
 - **Remove all vertical lines in tables.**
+
+<details>
+<summary>Examples — box boundary across page break</summary>
+
+> **Bad** — fragments missing top/bottom borders.
+>
+> <img src="examples/bad_box_no_boundary.png" width="700">
+
+> **Good** — each fragment closed on all four sides.
+>
+> <img src="examples/good_box_with_boundary.png" width="700">
+
+</details>
 
 ## Diagrams & Teasers
 
@@ -69,7 +83,6 @@ These two points are the most frequently repeated feedback. Get these right and 
 
 - If your work involves **vision generation**, you must show generation samples — not just numerical tables and plots.
 - **Show concrete examples** (dataset samples, environment screenshots, model outputs, etc.) so readers can see what your data and results actually look like. Especially important for data-centric work.
-- **Show failure cases.** This is especially important for VLM, VQA, generation, and similar work. Put them in the appendix, or in the main body if space allows. Showing failure cases makes your paper more credible and helps readers understand what is actually going on with your model. A paper that only shows successes is less trustworthy.
 
 > **Fig. 5** — Colored background blocks instead of dividing lines for data samples. Color palette reference. From WorldBench (upcoming).
 >
@@ -99,7 +112,7 @@ These two points are the most frequently repeated feedback. Get these right and 
 
 - **Use a variety of figure types**: line plots, bar charts, heatmaps, diagrams, etc. Do not use the same type throughout. Table sizes should also vary. But do not force variety for its own sake — keep it natural.
 - **Interleave figures and tables** throughout the paper. Do not cluster all figures on one page and all tables on another. The layout should have rhythm and visual appeal.
-- **Do not put one large figure at the front and then nothing but tables and line plots for the rest.** Spread visual elements (especially image-heavy figures, qualitative samples, or diagrams) throughout the paper so the visual weight stays balanced. Even colorful tables and plots get tiring if that is all the reader sees page after page. Mix in different kinds of visual content.
+- **Spread different types of visual content across the paper.** Do not put one big figure at the front and then nothing but tables and plots for the rest. Even colorful tables get tiring page after page — mix in image-heavy figures, qualitative samples, and diagrams throughout.
 - See [Cambrian-1](https://arxiv.org/abs/2406.16860) for a good example of figure/table arrangement.
 
 ## Plots (matplotlib)

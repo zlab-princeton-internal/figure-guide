@@ -44,7 +44,21 @@ By [Zhuang Liu](https://liuzhuang13.github.io/).
 - **注意图与 caption、caption 与正文之间的间距。** 这个间距经常要么太大要么太小，需要手动调整。只要你 aware 这件事，就会调到合适的距离。
 - **Caption 必须与正文在视觉上有明显区分。** 使用 `\captionsetup{font=footnotesize}`（或至少 `font=small`），让 caption 明显比正文小一两号。扫一眼页面就应该能区分 caption 和正文，否则页面会显得杂乱、结构不清。
 - **图内部不要太松散也不要太拥挤。** 箭头不要太长，box 和 box 之间不要隔太远。箭头应该基本填满两个 box 之间的空隙，不要出现"两个 box 隔很大一段空白、中间只有一小截箭头"的情况。
+- **大的 box（比如带颜色的 prompt 框）必须四面封闭，即使跨页也是。** 每一截都要看起来完整。
 - 表格去掉所有竖线。
+
+<details>
+<summary>跨页 box 边界的例子</summary>
+
+> **反例** — 跨页处缺上下边框。
+>
+> <img src="examples/bad_box_no_boundary.png" width="700">
+
+> **正例** — 每一截都四面封闭。
+>
+> <img src="examples/good_box_with_boundary.png" width="700">
+
+</details>
 
 ## 示意图 / Teaser
 
@@ -69,7 +83,6 @@ By [Zhuang Liu](https://liuzhuang13.github.io/).
 
 - 如果你的工作涉及 vision generation，论文中一定要展示 generation samples，不能只有数值表格和 plot。
 - 多放具体的 examples（数据集样本、环境截图、模型输出等），让读者能直观看到你的数据和结果长什么样。尤其是数据相关的工作。
-- 多展示 failure cases。这对 VLM、VQA、generation 类工作尤其重要。可以放 appendix，空间够也可以放正文。展示 failure cases 让你的论文更可信，也方便读者了解模型实际是什么情况。只展示成功案例的论文可信度反而会下降。
 
 > **Fig. 5** — 用背景色块代替分隔线展示数据样本，配色也可参考。From WorldBench (upcoming).
 >
@@ -99,7 +112,7 @@ By [Zhuang Liu](https://liuzhuang13.github.io/).
 
 - 图表类型要有 variety：折线图、柱状图、heatmap、示意图等混合使用，不要全是同一种。表格大小也应有些变化。但不要为了变化而强行变化，自然为主。
 - 图和表在论文中要穿插分布，不要某一页全是图、另一页全是表。整体要有节奏感和美感。
-- 不要把一个大图放在开头，然后后面全是表格和折线图。把不同类型的视觉元素（尤其是图片、qualitative samples、示意图）穿插在全文中，避免视觉比例失衡。即使是彩色的表格和折线图，连续看好几页也会让人疲劳。要混合多种视觉内容。
+- **不同类型的视觉元素要穿插全文。** 不要开头一个大图，后面全是表格和折线图。即使是彩色的表格连续看也会疲劳，要混合图片、qualitative samples、示意图等。
 - 可参考 [Cambrian-1](https://arxiv.org/abs/2406.16860) 等论文的图表编排。
 
 ## Plot（matplotlib）
