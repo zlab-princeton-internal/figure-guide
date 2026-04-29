@@ -4,7 +4,7 @@
 
 By [Zhuang Liu](https://liuzhuang13.github.io/).
 
-**Related**: [Writing Guide](https://github.com/zlab-princeton-internal/writing-guide) · [Paper Checking Prompt](https://github.com/zlab-princeton-internal/paper-checking-prompt) · [Peer Review System](https://github.com/zlab-princeton-internal/peer-review)
+**Related**: [Writing Guide](https://github.com/zlab-princeton-internal/writing-guide) · [AI Paper Checking](https://github.com/zlab-princeton-internal/ai-paper-checking) · [Peer Review System](https://github.com/zlab-princeton-internal/peer-review)
 
 > This guide is intended for [Zhuang Liu](https://liuzhuang13.github.io/)'s group members. Others are welcome to adopt or adapt it for their own use.
 
