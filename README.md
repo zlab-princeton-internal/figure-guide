@@ -46,6 +46,7 @@ These two points are the most frequently repeated feedback. Get these right and 
 
 - **Replace unnecessary dividing lines with colored background blocks** (see Fig. 6).
 - **Pay attention to the spacing between figure and caption, and between caption and body text.** This spacing is often too large or too small — adjust it manually. Once you are aware of this, you will get it right.
+- **Captions go below figures and tables, not above.** Even if conference instructions say otherwise, place them below.
 - **Captions must be visually distinct from body text at a glance.** Use `\captionsetup{font=footnotesize}` (or at least `font=small`) so that captions are clearly one or two sizes smaller than body text. When scanning a page, a reader should instantly tell which text is a caption and which is body — if they look the same size, the page feels cluttered and the structure is unclear.
 - **Figures should not be too sparse or too crowded internally.** Keep arrows short — they should roughly fill the gap between boxes. Avoid situations where two boxes are far apart with only a tiny arrow in between.
 - **Large boxes (e.g., colored prompt blocks) must close on all four sides, even when split across pages.** Each fragment should still look complete (see [Fig. 2](#fig-2)).
@@ -106,6 +107,10 @@ These two points are the most frequently repeated feedback. Get these right and 
 - **Side-by-side figures: the gap between them should be centered on the page** (or close to it). Do not let y-axis labels/ticks push everything to the right — shrink the figures or leave whitespace on the right to maintain visual symmetry. If there is an overall caption, it should also be centered on the page.
 - **Vertically align side-by-side subfigures**: the overall visual center of gravity (including titles and labels) should appear level. Design subfigures with consistent structure (both have titles on top, or neither does). If captions are separate ((a) and (b)), their first lines must align, and the number of caption lines should be similar.
 - **Avoid placing a narrow/sparse figure at the top of a page with large whitespace on both sides.** If a figure does not fill the column or page width, it leaves awkward empty space — especially noticeable at the top of a page. Either use `wrapfigure` to embed it alongside text, or place it in the middle of the page with text above and below.
+
+> **Bad** — A narrow figure at the top of the page with large whitespace on both sides.
+>
+> <img src="examples/bad_sparse_figure.png" width="700">
 - **Never have two consecutive pages without any figure or table.** Even one page without a figure/table should be rare.
 
 ## Variety & Rhythm
@@ -121,8 +126,13 @@ These two points are the most frequently repeated feedback. Get these right and 
 - **Line plots and scatter plots should be slightly wider than tall** — a landscape rectangle. Avoid squares, and especially avoid portrait orientation (taller than wide).
 - Consider adding **faint dashed grid lines** as background in line plots for better structure and easier value reading.
 - **Bar chart bars must be sharp rectangles.** No rounded corners.
-- **Iterate on color choices.** Do not pick colors casually. Refer to DyT and MoCo papers for color schemes, and the colored blocks in Fig. 6 (lighten as needed). (Recommended palettes to be added later.)
+- **Iterate on color choices.** Do not pick colors casually. Some recommended colors: **#483e8c**, **#1b76d2**, **#dc8969**. Also refer to DyT and MoCo papers for color schemes, and the colored blocks in Fig. 6 (lighten as needed).
 - **Y-axis tick values must be round numbers.** Do not let matplotlib auto-generate tick values from the data range — values like 30.3, 71.1, 96.9 look sloppy and unprofessional. Manually set ticks to clean integers (e.g., 30, 50, 70).
+
+> **Bad** — Y-axis ticks are auto-generated decimals (30.3, 50.8, 71.3, etc.).
+>
+> <img src="examples/bad_yaxis_ticks.png" width="700">
+
 - **Heatmap colors are hard to get right.** See Fig. 8 for a reference.
 
 > **Fig. 8** — Heatmap color scheme reference (red-yellow-green). From WorldBench (upcoming).
