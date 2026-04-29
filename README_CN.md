@@ -40,19 +40,21 @@ By [Zhuang Liu](https://liuzhuang13.github.io/).
 >
 > <img src="examples/dyt_diagram.png" width="500">
 
-- 尽量去掉无意义的分隔线和边框，可以用背景色块代替（参考 Fig. 5）。
+- 尽量去掉无意义的分隔线和边框，可以用背景色块代替（参考 Fig. 6）。
 - **注意图与 caption、caption 与正文之间的间距。** 这个间距经常要么太大要么太小，需要手动调整。只要你 aware 这件事，就会调到合适的距离。
 - **Caption 必须与正文在视觉上有明显区分。** 使用 `\captionsetup{font=footnotesize}`（或至少 `font=small`），让 caption 明显比正文小一两号。扫一眼页面就应该能区分 caption 和正文，否则页面会显得杂乱、结构不清。
 - **图内部不要太松散也不要太拥挤。** 箭头不要太长，box 和 box 之间不要隔太远。箭头应该基本填满两个 box 之间的空隙，不要出现"两个 box 隔很大一段空白、中间只有一小截箭头"的情况。
-- **大的 box（比如带颜色的 prompt 框）必须四面封闭，即使跨页也是。** 每一截都要看起来完整。
+- **大的 box（比如带颜色的 prompt 框）必须四面封闭，即使跨页也是。** 每一截都要看起来完整（见 [Fig. 2](#fig-2)）。
 - 表格去掉所有竖线。
 
-<table>
-<tr>
-<td><b>反例</b> — 跨页处缺上下边框。<br><img src="examples/bad_box_no_boundary.png" width="400"></td>
-<td><b>正例</b> — 每一截都四面封闭。<br><img src="examples/good_box_with_boundary.png" width="400"></td>
-</tr>
-</table>
+<a id="fig-2"></a>
+
+> **Fig. 2** — 跨页 box 边界。**反例**（左）：跨页处缺上下边框。**正例**（右）：每一截都四面封闭。
+>
+> <table><tr>
+> <td><img src="examples/bad_box_no_boundary.png" width="400"></td>
+> <td><img src="examples/good_box_with_boundary.png" width="400"></td>
+> </tr></table>
 
 ## 示意图 / Teaser
 
@@ -61,15 +63,15 @@ By [Zhuang Liu](https://liuzhuang13.github.io/).
 - Pipeline/diagram 类的图也可以考虑用 HTML 制作（通过 prompting 修改会更方便），但注意避免典型的 HTML 风格：不要使用粗体文字、全大写短语、灰色分隔线、灰色文字。文字默认用黑色，使用普通大小写，保持学术论文的视觉风格。
 - **用 HTML 设计时，先并排提出多个布局方案再做选择。** 在一个 HTML 页面中同时展示 3-4 个平行方案来比较，比每次只改一点要快得多。这适用于布局、配色和元素位置。
 
-> **Fig. 2** — 用一张简洁的图表达整个核心机制。From [MoCo](https://arxiv.org/abs/1911.05722).
+> **Fig. 3** — 用一张简洁的图表达整个核心机制。From [MoCo](https://arxiv.org/abs/1911.05722).
 >
 > <img src="examples/moco_fig1.png" width="300">
 
-> **Fig. 3** — 三种方法并排对比，结构一致，差异一目了然，每个子图单独读也很容易理解。From [MoCo](https://arxiv.org/abs/1911.05722).
+> **Fig. 4** — 三种方法并排对比，结构一致，差异一目了然，每个子图单独读也很容易理解。From [MoCo](https://arxiv.org/abs/1911.05722).
 >
 > <img src="examples/moco_fig2.png" width="700">
 
-> **Fig. 4** — 左右对比，用具体数字演示两种方法的差异，一看就懂。From [Wanda](https://arxiv.org/abs/2306.11695).
+> **Fig. 5** — 左右对比，用具体数字演示两种方法的差异，一看就懂。From [Wanda](https://arxiv.org/abs/2306.11695).
 >
 > <img src="examples/wanda_fig1.png" width="700">
 
@@ -78,7 +80,7 @@ By [Zhuang Liu](https://liuzhuang13.github.io/).
 - 如果你的工作涉及 vision generation，论文中一定要展示 generation samples，不能只有数值表格和 plot。
 - 多放具体的 examples（数据集样本、环境截图、模型输出等），让读者能直观看到你的数据和结果长什么样。尤其是数据相关的工作。
 
-> **Fig. 5** — 用背景色块代替分隔线展示数据样本，配色也可参考。From WorldBench (upcoming).
+> **Fig. 6** — 用背景色块代替分隔线展示数据样本，配色也可参考。From WorldBench (upcoming).
 >
 > <img src="examples/colorbox_example.png" width="700">
 
@@ -87,7 +89,7 @@ By [Zhuang Liu](https://liuzhuang13.github.io/).
 - 如果你的方法足够简单，考虑加一个伪代码或真实代码（如 PyTorch）来描述核心算法。这对 clarity 很有帮助。
 - 方法简单时用真实代码，概念性的用伪代码。
 
-> **Fig. 6** — 直接用 PyTorch 代码描述算法，几行就说清楚了。From [Wanda](https://arxiv.org/abs/2306.11695).
+> **Fig. 7** — 直接用 PyTorch 代码描述算法，几行就说清楚了。From [Wanda](https://arxiv.org/abs/2306.11695).
 >
 > <img src="examples/wanda_algo.png" width="350">
 
@@ -116,10 +118,10 @@ By [Zhuang Liu](https://liuzhuang13.github.io/).
 - 折线图考虑加很淡的虚线网格作为背景，增加结构感，方便读者读取数值。
 - Y 轴刻度必须是整数。不要让 matplotlib 自动生成刻度值（如 30.3, 71.1, 96.9），手动设置为整数（如 30, 50, 70）。
 - 柱状图的 bar 一定要用纯粹的矩形，不要用圆角。
-- 配色要反复调整，不要随意选。可以参考 DyT 和 MoCo 论文的配色方案，以及 Fig. 5 中的彩色背景块配色（实际使用可适当调浅）。（后续会补充推荐配色。）
+- 配色要反复调整，不要随意选。可以参考 DyT 和 MoCo 论文的配色方案，以及 Fig. 6 中的彩色背景块配色（实际使用可适当调浅）。（后续会补充推荐配色。）
 - Heatmap 的配色不容易调好，下面是一个可参考的配色方案。
 
-> **Fig. 7** — Heatmap 配色参考（红黄绿方案）。From WorldBench (upcoming).
+> **Fig. 8** — Heatmap 配色参考（红黄绿方案）。From WorldBench (upcoming).
 >
 > <img src="examples/heatmap_example.png" width="450">
 

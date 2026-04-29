@@ -40,19 +40,21 @@ These two points are the most frequently repeated feedback. Get these right and 
 >
 > <img src="examples/dyt_diagram.png" width="500">
 
-- **Replace unnecessary dividing lines with colored background blocks** (see Fig. 5).
+- **Replace unnecessary dividing lines with colored background blocks** (see Fig. 6).
 - **Pay attention to the spacing between figure and caption, and between caption and body text.** This spacing is often too large or too small — adjust it manually. Once you are aware of this, you will get it right.
 - **Captions must be visually distinct from body text at a glance.** Use `\captionsetup{font=footnotesize}` (or at least `font=small`) so that captions are clearly one or two sizes smaller than body text. When scanning a page, a reader should instantly tell which text is a caption and which is body — if they look the same size, the page feels cluttered and the structure is unclear.
 - **Figures should not be too sparse or too crowded internally.** Keep arrows short — they should roughly fill the gap between boxes. Avoid situations where two boxes are far apart with only a tiny arrow in between.
-- **Large boxes (e.g., colored prompt blocks) must close on all four sides, even when split across pages.** Each fragment should still look complete.
+- **Large boxes (e.g., colored prompt blocks) must close on all four sides, even when split across pages.** Each fragment should still look complete (see [Fig. 2](#fig-2)).
 - **Remove all vertical lines in tables.**
 
-<table>
-<tr>
-<td><b>Bad</b> — fragments missing top/bottom borders.<br><img src="examples/bad_box_no_boundary.png" width="400"></td>
-<td><b>Good</b> — each fragment closed on all four sides.<br><img src="examples/good_box_with_boundary.png" width="400"></td>
-</tr>
-</table>
+<a id="fig-2"></a>
+
+> **Fig. 2** — Box boundary across page break. **Bad** (left): fragments missing top/bottom borders. **Good** (right): each fragment closed on all four sides.
+>
+> <table><tr>
+> <td><img src="examples/bad_box_no_boundary.png" width="400"></td>
+> <td><img src="examples/good_box_with_boundary.png" width="400"></td>
+> </tr></table>
 
 ## Diagrams & Teasers
 
@@ -61,15 +63,15 @@ These two points are the most frequently repeated feedback. Get these right and 
 - Pipeline/diagram figures can also be made with HTML (easier to iterate via prompting), but avoid the typical HTML aesthetic: no bold text, no ALL-CAPS phrases, no gray dividing lines, no gray text. Default to black text and normal capitalization. Maintain an academic paper look.
 - **When designing with HTML, propose multiple layout options side-by-side before committing.** It is much faster to compare 3–4 parallel designs in one HTML page than to iterate on a single design one tweak at a time. This applies to layout, color schemes, and element positioning.
 
-> **Fig. 2** — One simple figure captures the entire core mechanism. From [MoCo](https://arxiv.org/abs/1911.05722).
+> **Fig. 3** — One simple figure captures the entire core mechanism. From [MoCo](https://arxiv.org/abs/1911.05722).
 >
 > <img src="examples/moco_fig1.png" width="300">
 
-> **Fig. 3** — Three methods side by side, consistent structure, differences obvious at a glance. From [MoCo](https://arxiv.org/abs/1911.05722).
+> **Fig. 4** — Three methods side by side, consistent structure, differences obvious at a glance. From [MoCo](https://arxiv.org/abs/1911.05722).
 >
 > <img src="examples/moco_fig2.png" width="700">
 
-> **Fig. 4** — Left-right comparison with concrete numbers, instantly understandable. From [Wanda](https://arxiv.org/abs/2306.11695).
+> **Fig. 5** — Left-right comparison with concrete numbers, instantly understandable. From [Wanda](https://arxiv.org/abs/2306.11695).
 >
 > <img src="examples/wanda_fig1.png" width="700">
 
@@ -78,7 +80,7 @@ These two points are the most frequently repeated feedback. Get these right and 
 - If your work involves **vision generation**, you must show generation samples — not just numerical tables and plots.
 - **Show concrete examples** (dataset samples, environment screenshots, model outputs, etc.) so readers can see what your data and results actually look like. Especially important for data-centric work.
 
-> **Fig. 5** — Colored background blocks instead of dividing lines for data samples. Color palette reference. From WorldBench (upcoming).
+> **Fig. 6** — Colored background blocks instead of dividing lines for data samples. Color palette reference. From WorldBench (upcoming).
 >
 > <img src="examples/colorbox_example.png" width="700">
 
@@ -87,7 +89,7 @@ These two points are the most frequently repeated feedback. Get these right and 
 - If your method is simple enough, consider including pseudocode or real code (e.g., PyTorch) to describe the core algorithm. This greatly helps clarity.
 - Use real code when the method is simple; use pseudocode for more conceptual descriptions.
 
-> **Fig. 6** — A few lines of PyTorch code explain the entire algorithm. From [Wanda](https://arxiv.org/abs/2306.11695).
+> **Fig. 7** — A few lines of PyTorch code explain the entire algorithm. From [Wanda](https://arxiv.org/abs/2306.11695).
 >
 > <img src="examples/wanda_algo.png" width="350">
 
@@ -115,11 +117,11 @@ These two points are the most frequently repeated feedback. Get these right and 
 - **Line plots and scatter plots should be slightly wider than tall** — a landscape rectangle. Avoid squares, and especially avoid portrait orientation (taller than wide).
 - Consider adding **faint dashed grid lines** as background in line plots for better structure and easier value reading.
 - **Bar chart bars must be sharp rectangles.** No rounded corners.
-- **Iterate on color choices.** Do not pick colors casually. Refer to DyT and MoCo papers for color schemes, and the colored blocks in Fig. 5 (lighten as needed). (Recommended palettes to be added later.)
+- **Iterate on color choices.** Do not pick colors casually. Refer to DyT and MoCo papers for color schemes, and the colored blocks in Fig. 6 (lighten as needed). (Recommended palettes to be added later.)
 - **Y-axis tick values must be round numbers.** Do not let matplotlib auto-generate tick values from the data range — values like 30.3, 71.1, 96.9 look sloppy and unprofessional. Manually set ticks to clean integers (e.g., 30, 50, 70).
-- **Heatmap colors are hard to get right.** See Fig. 7 for a reference.
+- **Heatmap colors are hard to get right.** See Fig. 8 for a reference.
 
-> **Fig. 7** — Heatmap color scheme reference (red-yellow-green). From WorldBench (upcoming).
+> **Fig. 8** — Heatmap color scheme reference (red-yellow-green). From WorldBench (upcoming).
 >
 > <img src="examples/heatmap_example.png" width="450">
 
