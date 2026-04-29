@@ -47,9 +47,6 @@ These two points are the most frequently repeated feedback. Get these right and 
 - **Large boxes (e.g., colored prompt blocks) must close on all four sides, even when split across pages.** Each fragment should still look complete.
 - **Remove all vertical lines in tables.**
 
-<details>
-<summary>Examples — box boundary across page break</summary>
-
 > **Bad** — fragments missing top/bottom borders.
 >
 > <img src="examples/bad_box_no_boundary.png" width="700">
@@ -57,8 +54,6 @@ These two points are the most frequently repeated feedback. Get these right and 
 > **Good** — each fragment closed on all four sides.
 >
 > <img src="examples/good_box_with_boundary.png" width="700">
-
-</details>
 
 ## Diagrams & Teasers
 
