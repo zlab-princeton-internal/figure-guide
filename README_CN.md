@@ -47,13 +47,12 @@ By [Zhuang Liu](https://liuzhuang13.github.io/).
 - **大的 box（比如带颜色的 prompt 框）必须四面封闭，即使跨页也是。** 每一截都要看起来完整。
 - 表格去掉所有竖线。
 
-> **反例** — 跨页处缺上下边框。
->
-> <img src="examples/bad_box_no_boundary.png" width="700">
-
-> **正例** — 每一截都四面封闭。
->
-> <img src="examples/good_box_with_boundary.png" width="700">
+<table>
+<tr>
+<td><b>反例</b> — 跨页处缺上下边框。<br><img src="examples/bad_box_no_boundary.png" width="400"></td>
+<td><b>正例</b> — 每一截都四面封闭。<br><img src="examples/good_box_with_boundary.png" width="400"></td>
+</tr>
+</table>
 
 ## 示意图 / Teaser
 

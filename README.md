@@ -47,13 +47,12 @@ These two points are the most frequently repeated feedback. Get these right and 
 - **Large boxes (e.g., colored prompt blocks) must close on all four sides, even when split across pages.** Each fragment should still look complete.
 - **Remove all vertical lines in tables.**
 
-> **Bad** — fragments missing top/bottom borders.
->
-> <img src="examples/bad_box_no_boundary.png" width="700">
-
-> **Good** — each fragment closed on all four sides.
->
-> <img src="examples/good_box_with_boundary.png" width="700">
+<table>
+<tr>
+<td><b>Bad</b> — fragments missing top/bottom borders.<br><img src="examples/bad_box_no_boundary.png" width="400"></td>
+<td><b>Good</b> — each fragment closed on all four sides.<br><img src="examples/good_box_with_boundary.png" width="400"></td>
+</tr>
+</table>
 
 ## Diagrams & Teasers
 
